@@ -112,8 +112,8 @@ are split for training and the other 11,316 (60,502 images) labels are used for 
 [Dataset page.](https://www.kaggle.com/datasets/qiubit/roxfordparis/)
 
 The dataset combines Revisited Oxford (roxford5k) and Revisited Paris (rparis6k) for image retrieval benchmarking.
-It contains 11,454 images in total:
-- Revisited Oxford: 4,993 training/gallery images + 69 validation/query images
+It contains 11,455 images in total:
+- Revisited Oxford: 4,993 training/gallery images + 70 validation/query images
 - Revisited Paris: 6,322 training/gallery images + 70 validation/query images
 
 ```
