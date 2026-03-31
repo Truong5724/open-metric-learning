@@ -105,5 +105,31 @@ are split for training and the other 11,316 (60,502 images) labels are used for 
 </p>
 </details>
 
+<details>
+<summary>Revisited Oxford and Paris</summary>
+<p>
+
+[Dataset page.](https://www.kaggle.com/datasets/qiubit/roxfordparis/)
+
+The dataset combines Revisited Oxford (roxford5k) and Revisited Paris (rparis6k) for image retrieval benchmarking.
+It contains 11,454 images in total:
+- Revisited Oxford: 4,993 training/gallery images + 69 validation/query images
+- Revisited Paris: 6,322 training/gallery images + 70 validation/query images
+
+```
+└── roxfordparis
+    ├── df.csv
+    ├── roxford5k
+    │   └── jpg
+    │       ├── all_souls_000000.jpg
+    │       └── ...  
+    └── rparis6k
+        └── jpg
+            ├── paris_defense_000000.jpg
+            └── ...
+```
+</p>
+</details>
+
 Note, you can find our pretrained checkpoints for these datasets in the
 [Models zoo](https://github.com/OML-Team/open-metric-learning#zoo).

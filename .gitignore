@@ -4,6 +4,7 @@
 .vscode/*
 .env
 dataset
+data/
 lightning_logs/
 notebooks/
 dist/*
