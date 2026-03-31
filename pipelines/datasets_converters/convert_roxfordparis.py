@@ -54,7 +54,7 @@ def build_roxfordparis_df(dataset_root: Path) -> pd.DataFrame:
     all_names = oxford_imlist + paris_imlist + oxford_qimlist + paris_qimlist
     all_categories = [extract_category(name) for name in all_names]
     unique_categories = sorted(set(all_categories))
-    category_to_label = {cat: idx for idx, cat in enumerate(unique_categories)}
+    category_to_label = {cat: idx + 1 for idx, cat in enumerate(unique_categories)}
 
     def create_df(names, prefix, split, is_query, is_gallery):
         paths = [f"{prefix}/jpg/{name}.jpg" for name in names]
@@ -62,8 +62,8 @@ def build_roxfordparis_df(dataset_root: Path) -> pd.DataFrame:
         labels = [category_to_label[cat] for cat in categories]
 
         return pd.DataFrame({
-            PATHS_COLUMN: paths,
             LABELS_COLUMN: labels,
+            PATHS_COLUMN: paths,
             SPLIT_COLUMN: split,
             IS_QUERY_COLUMN: is_query,
             IS_GALLERY_COLUMN: is_gallery,
@@ -87,11 +87,11 @@ def build_roxfordparis_df(dataset_root: Path) -> pd.DataFrame:
 
 
 def main() -> None:
-    print("Oxford5k dataset preparation started...")
+    print("Revisited Oxford and Paris dataset preparation started...")
     args = get_argparser().parse_args()
     df = build_roxfordparis_df(args.dataset_root)
-    df.to_csv(args.dataset_root / df.csv, index=None)
-    print("Oxford5k dataset preparation completed.")
+    df.to_csv(args.dataset_root / "df.csv", index=None)
+    print("Revisited Oxford and Paris dataset preparation completed.")
     print(f"DataFrame saved in {args.dataset_root}\n")
 
 
