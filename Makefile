@@ -76,7 +76,8 @@ test_converters:
 	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_cars.py    --dataset_root  data/CARS196 --no_bboxes
 	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_inshop.py  --dataset_root  data/DeepFashion_InShop
 	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_inshop.py  --dataset_root  data/DeepFashion_InShop --no_bboxes
-	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_roxfordparis.py  --dataset_root data/roxfordparis
+	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_roxford.py  --dataset_root data/roxford5k
+	export PYTHONWARNINGS=ignore; python pipelines/datasets_converters/convert_rparis.py  --dataset_root data/rparis6k
 
 .PHONY: static_checks
 static_checks:

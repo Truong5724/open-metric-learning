@@ -82,6 +82,7 @@ The dataset contains 52,712 images for 7,982 of clothing items.
 </details>
 
 
+
 <details>
 <summary>SOP (Stanford Online Products)</summary>
 <p>
@@ -105,28 +106,44 @@ are split for training and the other 11,316 (60,502 images) labels are used for 
 </p>
 </details>
 
+
+
 <details>
-<summary>Revisited Oxford and Paris</summary>
+<summary>Revisited Oxford</summary>
 <p>
 
 [Dataset page.](https://www.kaggle.com/datasets/qiubit/roxfordparis/)
 
-The dataset combines Revisited Oxford (roxford5k) and Revisited Paris (rparis6k) for image retrieval benchmarking.
-It contains 11,455 images in total:
-- Revisited Oxford: 4,993 training/gallery images + 70 validation/query images
-- Revisited Paris: 6,322 training/gallery images + 70 validation/query images
+The Revisited Oxford dataset contains 4,993 training/gallery images and 70 validation/query images.
 
 ```
-└── roxfordparis
+└── roxford5k
     ├── df.csv
-    ├── roxford5k
-    │   └── jpg
-    │       ├── all_souls_000000.jpg
-    │       └── ...  
-    └── rparis6k
-        └── jpg
-            ├── paris_defense_000000.jpg
-            └── ...
+    ├── gnd_roxford5k.pkl
+    └── jpg
+        ├── all_souls_000000.jpg
+        └── ...  
+```
+</p>
+</details>
+
+
+
+<details>
+<summary>Revisited Paris</summary>
+<p>
+
+[Dataset page.](https://www.kaggle.com/datasets/qiubit/roxfordparis/)
+
+The Revisited Paris dataset contains 6,322 training/gallery images and 70 validation/query images.
+
+```
+└── rparis6k
+    ├── df.csv
+    ├── gnd_rparis6k.pkl
+    └── jpg
+        ├── paris_defense_000000.jpg
+        └── ...
 ```
 </p>
 </details>
